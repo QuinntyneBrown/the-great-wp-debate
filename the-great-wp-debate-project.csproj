@@ -7,8 +7,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{CB0BDE3F-AAA6-419C-9451-8A0CA0A2A338}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -23,8 +22,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -73,7 +71,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\app.component.html">
+      <DependentUpon>app.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\app.component.scss">
+      <DependentUpon>app.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\components\page-header.component.html">
       <DependentUpon>page-header.component.ts</DependentUpon>
     </Content>
@@ -135,7 +138,6 @@
     <Content Include="index.html" />
     <Content Include="lib\jquery.min.js" />
     <Content Include="lib\slick.min.js" />
-    <Content Include="src\app\app.component.html" />
     <Content Include="src\images\logo.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -147,11 +149,11 @@
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\localstorage-id.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\pages\index.ts" />
     <TypeScriptCompile Include="src\app\pages\landing-page.component.ts" />
-    <TypeScriptCompile Include="src\app\routing\auth-guard.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
@@ -171,6 +173,9 @@
     <TypeScriptCompile Include="src\app\pages\schedule-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\debate-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\debates-page.component.ts" />
+    <TypeScriptCompile Include="src\app\routing\authentication-guard.ts" />
+    <TypeScriptCompile Include="src\app\services\local-storage.service.ts" />
+    <TypeScriptCompile Include="src\app\constants\index.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -194,8 +199,7 @@
           <IISUrl>http://localhost:63680/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

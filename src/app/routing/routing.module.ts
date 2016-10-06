@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-
+import { AuthenticationGuard } from "./authentication-guard";
 import {
     LandingPageComponent,
     DebatePageComponent,
@@ -15,7 +15,8 @@ export const routes: Routes = [
     },
     {
         path: 'debates',
-        component: DebatesPageComponent
+        component: DebatesPageComponent,
+        canActivate: [AuthenticationGuard]
     },
     {
         path: 'login',
@@ -23,11 +24,13 @@ export const routes: Routes = [
     },
     {
         path: 'schedule',
-        component: SchedulePageComponent
+        component: SchedulePageComponent,
+        canActivate: [AuthenticationGuard]
     },
     {
         path: 'debate/:id',
-        component: DebatePageComponent
+        component: DebatePageComponent,
+        canActivate: [AuthenticationGuard]
     }
 ];
 
@@ -36,6 +39,10 @@ export const RoutingModule = RouterModule.forRoot([
 ]);
 
 export const routedComponents = [
-    LandingPageComponent
+    LandingPageComponent,
+    DebatesPageComponent,
+    DebatePageComponent,
+    SchedulePageComponent,   
+    LoginPageComponent 
 ];
 
