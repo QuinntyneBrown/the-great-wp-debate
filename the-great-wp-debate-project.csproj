@@ -74,7 +74,42 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="src\app\app.component.scss" />
-    <Content Include="src\app\pages\landing-page.component.scss" />
+    <Content Include="src\app\components\page-header.component.html">
+      <DependentUpon>page-header.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\page-header.component.scss">
+      <DependentUpon>page-header.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\debate-page.component.html">
+      <DependentUpon>debate-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\debate-page.component.scss">
+      <DependentUpon>debate-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\debates-page.component.html">
+      <DependentUpon>debates-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\debates-page.component.scss">
+      <DependentUpon>debates-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\landing-page.component.html">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\landing-page.component.scss">
+      <DependentUpon>landing-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\login-page.component.html">
+      <DependentUpon>login-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\login-page.component.scss">
+      <DependentUpon>login-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\schedule-page.component.html">
+      <DependentUpon>schedule-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\schedule-page.component.scss">
+      <DependentUpon>schedule-page.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\styles\index.scss" />
     <Content Include="src\styles\_breakpoints.scss" />
     <Content Include="src\styles\_normalize.scss" />
@@ -101,7 +136,6 @@
     <Content Include="lib\jquery.min.js" />
     <Content Include="lib\slick.min.js" />
     <Content Include="src\app\app.component.html" />
-    <Content Include="src\app\pages\landing-page.component.html" />
     <Content Include="src\images\logo.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -117,6 +151,7 @@
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\pages\index.ts" />
     <TypeScriptCompile Include="src\app\pages\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\routing\auth-guard.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
@@ -131,6 +166,11 @@
     <TypeScriptCompile Include="typings\globals\require\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\slick-carousel\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
+    <TypeScriptCompile Include="src\app\components\page-header.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\login-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\schedule-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\debate-page.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\debates-page.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
