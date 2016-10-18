@@ -17,7 +17,7 @@ export class AuthenticationGuard {
         next: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ) {
-        if (LocalStorageService.get({ name: "token" })) { return Observable.of(true); }        
+        if (LocalStorageService.Instance.get({ name: "token" })) { return Observable.of(true); }        
 
         this._router.navigate(["/login"]);
         return Observable.of(false);

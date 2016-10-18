@@ -1,17 +1,28 @@
 import { Injectable } from "@angular/core";
-import { LOCALSTORAGE_ID } from "../constants";
 
 @Injectable()
 export class LocalStorageService {
     constructor() {
-        window.onbeforeunload = () => localStorage.setItem(LOCALSTORAGE_ID, JSON.stringify(LocalStorageService.items))
+        window.onbeforeunload = () => localStorage.setItem(LocalStorageService.id, JSON.stringify(this._items))
     }
-    
-    private static _items = null;
 
-    private static get items() {
+    private static _instance;
+
+    public static id = "[Local Storage Service]";
+
+    public static get Instance():LocalStorageService {
+        if (!LocalStorageService._instance) {
+            LocalStorageService._instance = new LocalStorageService();
+        }
+
+        return LocalStorageService._instance;
+    }
+
+    private _items = null;
+
+    public get items() {
         if (this._items === null) {
-            var storageItems = localStorage.getItem(LOCALSTORAGE_ID);
+            var storageItems = localStorage.getItem(LocalStorageService.id);
             if (storageItems === "null") {
                 storageItems = null;
             }
@@ -21,23 +32,23 @@ export class LocalStorageService {
         return this._items;
     }
 
-    private static set items(value: Array<any>) {
+    public set items(value: Array<any>) {
         this._items = value;
     }
 
-    public static get = (options: { name: string }) => {
+    public get = (options: { name: string }) => {
         var storageItem = null;
-        for (var i = 0; i < LocalStorageService.items.length; i++) {
-            if (options.name === LocalStorageService.items[i].name)
-                storageItem = LocalStorageService.items[i].value;
+        for (var i = 0; i < this._items.length; i++) {
+            if (options.name === this._items[i].name)
+                storageItem = this._items[i].value;
         }
         return storageItem;
     }
 
-    public static put = (options: any) => {
+    public put = (options: any) => {
         var itemExists = false;
 
-        LocalStorageService.items.forEach((item: any) => {
+        this._items.forEach((item: any) => {
             if (options.name === item.name) {
                 itemExists = true;
                 item.value = options.value
@@ -45,16 +56,14 @@ export class LocalStorageService {
         });
 
         if (!itemExists) {
-            var items = LocalStorageService.items;
+            var items = this._items;
             items.push({ name: options.name, value: options.value });
-            LocalStorageService.items = items;
+            this._items = items;
             items = null;
         }
     }
 
-    public static clear = () => {
-        LocalStorageService._items = [];
-    }
-
-
+    public clear = () => {
+        this._items = [];
+    }    
 }
