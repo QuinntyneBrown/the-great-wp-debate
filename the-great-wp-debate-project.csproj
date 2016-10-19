@@ -85,34 +85,46 @@
     <Content Include="src\app\components\page-header.component.scss">
       <DependentUpon>page-header.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\debate-page.component.html">
+    <Content Include="src\app\modules\blog\article-page.component.html">
+      <DependentUpon>article-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\modules\blog\article-page.component.scss">
+      <DependentUpon>article-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\modules\debate\debate-page.component.html">
       <DependentUpon>debate-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\debate-page.component.scss">
+    <Content Include="src\app\modules\debate\debate-page.component.scss">
       <DependentUpon>debate-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\debates-page.component.html">
+    <Content Include="src\app\modules\debate\debates-page.component.html">
       <DependentUpon>debates-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\debates-page.component.scss">
+    <Content Include="src\app\modules\debate\debates-page.component.scss">
       <DependentUpon>debates-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\landing-page.component.html">
+    <Content Include="src\app\modules\landing\landing-page.component.html">
       <DependentUpon>landing-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\landing-page.component.scss">
+    <Content Include="src\app\modules\landing\landing-page.component.scss">
       <DependentUpon>landing-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\login-page.component.html">
+    <Content Include="src\app\modules\meeting\meetings-page.component.html">
+      <DependentUpon>meetings-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\modules\meeting\meetings-page.component.scss">
+      <DependentUpon>meetings-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\modules\user\login-page.component.html">
       <DependentUpon>login-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\login-page.component.scss">
+    <Content Include="src\app\modules\user\login-page.component.scss">
       <DependentUpon>login-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\schedule-page.component.html">
+    <Content Include="src\app\modules\debate\schedule-page.component.html">
       <DependentUpon>schedule-page.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\pages\schedule-page.component.scss">
+    <Content Include="src\app\modules\debate\schedule-page.component.scss">
       <DependentUpon>schedule-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\styles\index.scss" />
@@ -153,20 +165,23 @@
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
-    <TypeScriptCompile Include="src\app\constants\localstorage-id.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\modules\blog\article-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\blog\blog.module.ts" />
     <TypeScriptCompile Include="src\app\modules\blog\index.ts" />
+    <TypeScriptCompile Include="src\app\modules\debate\debate.module.ts" />
     <TypeScriptCompile Include="src\app\modules\landing\index.ts" />
+    <TypeScriptCompile Include="src\app\modules\landing\landing.module.ts" />
     <TypeScriptCompile Include="src\app\modules\meeting\index.ts" />
+    <TypeScriptCompile Include="src\app\modules\meeting\meeting.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\meeting\meetings-page.component.ts" />
     <TypeScriptCompile Include="src\app\modules\user\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\landing\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\user\user.module.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
-    <TypeScriptCompile Include="src\app\services\index.ts" />
-    <TypeScriptCompile Include="src\app\services\services.module.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
@@ -177,15 +192,13 @@
     <TypeScriptCompile Include="typings\globals\slick-carousel\index.d.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />
     <TypeScriptCompile Include="src\app\components\page-header.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\login-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\schedule-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\debate-page.component.ts" />
-    <TypeScriptCompile Include="src\app\pages\debates-page.component.ts" />
-    <TypeScriptCompile Include="src\app\routing\authentication-guard.ts" />
-    <TypeScriptCompile Include="src\app\services\local-storage.service.ts" />
-    <TypeScriptCompile Include="src\app\constants\index.ts" />
-    <TypeScriptCompile Include="src\app\services\user.service.ts" />
-    <TypeScriptCompile Include="src\app\services\meeting.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\user\login-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\debate\schedule-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\debate\debate-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\debate\debates-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\user\authentication-guard.ts" />
+    <TypeScriptCompile Include="src\app\modules\user\user.service.ts" />
+    <TypeScriptCompile Include="src\app\modules\meeting\meeting.service.ts" />
     <TypeScriptCompile Include="src\app\modules\index.ts" />
   </ItemGroup>
   <ItemGroup>

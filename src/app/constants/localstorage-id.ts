@@ -1,1 +1,0 @@
-﻿export const LOCALSTORAGE_ID = "[LOCALSTORAGE_ID]";

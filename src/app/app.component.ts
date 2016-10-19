@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit, ViewEncapsulation } from "@angular/core";
+import { Component, ChangeDetectionStrategy, Input, OnInit, ViewEncapsulation, Renderer } from "@angular/core";
 
 @Component({
     template: require("./app.component.html"),
@@ -7,4 +7,9 @@ import { Component, ChangeDetectionStrategy, Input, OnInit, ViewEncapsulation } 
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None
 })
-export class AppComponent { }
+export class AppComponent {
+    constructor(private renderer: Renderer) {
+
+    }
+
+}
