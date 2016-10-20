@@ -11,7 +11,6 @@ const declarables = [
     SchedulePageComponent
 ];
 
-
 @NgModule({
     imports: [CommonModule],
     exports: [declarables],

@@ -6,8 +6,10 @@ import {
     RouterStateSnapshot
 } from '@angular/router'
 
-import { LocalStorageService } from "../services";
+
 import { Observable } from 'rxjs/Observable';
+
+import { LocalStorageService } from "ng2-local-storage";
 
 @Injectable()
 export class AuthenticationGuard {    

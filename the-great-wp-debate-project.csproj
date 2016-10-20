@@ -171,6 +171,7 @@
     <TypeScriptCompile Include="src\app\modules\blog\blog.module.ts" />
     <TypeScriptCompile Include="src\app\modules\blog\index.ts" />
     <TypeScriptCompile Include="src\app\modules\debate\debate.module.ts" />
+    <TypeScriptCompile Include="src\app\modules\debate\index.ts" />
     <TypeScriptCompile Include="src\app\modules\landing\index.ts" />
     <TypeScriptCompile Include="src\app\modules\landing\landing.module.ts" />
     <TypeScriptCompile Include="src\app\modules\meeting\index.ts" />
@@ -178,6 +179,7 @@
     <TypeScriptCompile Include="src\app\modules\meeting\meetings-page.component.ts" />
     <TypeScriptCompile Include="src\app\modules\user\index.ts" />
     <TypeScriptCompile Include="src\app\modules\landing\landing-page.component.ts" />
+    <TypeScriptCompile Include="src\app\modules\user\login-redirect.service.ts" />
     <TypeScriptCompile Include="src\app\modules\user\user.module.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />

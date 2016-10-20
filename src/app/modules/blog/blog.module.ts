@@ -7,7 +7,6 @@ const declarables = [
     ArticlePageComponent
 ];
 
-
 @NgModule({
     imports: [CommonModule],
     exports: [declarables],

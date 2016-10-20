@@ -1,12 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
-import { AuthenticationGuard } from "./authentication-guard";
+import { AuthenticationGuard } from "../modules";
 import {
     LandingPageComponent,
     DebatePageComponent,
     DebatesPageComponent,
     LoginPageComponent,
     SchedulePageComponent
-} from "../pages";
+} from "../modules";
 
 export const routes: Routes = [
     {

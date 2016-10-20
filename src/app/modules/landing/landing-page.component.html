@@ -1,8 +1,8 @@
 <div class="landing-page">
     <div>
-        <img src="{{ logoUrl }}" />
-        <h1>The Great WP Debate</h1>
-        <a>Enter</a>
+        <img [src]="logoUrl" />
+        <h2>The Great WP Debate</h2>
+        <a (click)="_router.navigate(['/login'])">Enter</a>
     </div>    
 </div>
 
