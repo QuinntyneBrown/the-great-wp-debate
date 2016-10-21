@@ -14,7 +14,6 @@ import { ComponentsModule } from "./components";
 import {
     BlogModule,
     DebateModule,
-    LandingModule,
     MeetingModule,
     UserModule
 } from "./modules";
@@ -35,7 +34,6 @@ const declarables = [
 
         BlogModule,
         DebateModule,
-        LandingModule,
         MeetingModule,
         UserModule,
 

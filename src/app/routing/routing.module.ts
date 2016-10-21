@@ -1,7 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { AuthenticationGuard } from "../modules";
 import {
-    LandingPageComponent,
     DebatePageComponent,
     DebatesPageComponent,
     LoginPageComponent,
@@ -11,7 +10,7 @@ import {
 export const routes: Routes = [
     {
         path: '',
-        component: LandingPageComponent
+        loadChildren: '../modules/landing/landing.module#LandingModule'
     },
     {
         path: 'debates',
@@ -38,8 +37,7 @@ export const RoutingModule = RouterModule.forRoot([
     ...routes
 ]);
 
-export const routedComponents = [
-    LandingPageComponent,
+export const routedComponents = [    
     DebatesPageComponent,
     DebatePageComponent,
     SchedulePageComponent,   
