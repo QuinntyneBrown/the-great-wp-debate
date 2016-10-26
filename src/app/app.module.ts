@@ -9,19 +9,16 @@ import "./rxjs-extensions";
 
 import { AppComponent } from './app.component';
 
-import { ComponentsModule } from "./components";
-
-import {
-    BlogModule,
-    DebateModule,
-    MeetingModule,
-    UserModule
-} from "./modules";
+import { BlogModule } from "./blog";
+import { DebateModule } from "./debate";
+import { MeetingModule } from "./meeting";
+import { SharedModule } from "./shared";
+import { UserModule } from "./user";
 
 import {
     RoutingModule,
     routedComponents
-} from "./routing";
+} from "./app.routing";
 
 const declarables = [
     AppComponent
@@ -29,12 +26,12 @@ const declarables = [
 
 @NgModule({
     imports: [
-        ComponentsModule,
         RoutingModule,
 
         BlogModule,
         DebateModule,
         MeetingModule,
+        SharedModule,
         UserModule,
 
         BrowserModule,

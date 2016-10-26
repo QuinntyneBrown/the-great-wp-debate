@@ -1,16 +1,11 @@
-import { Routes, RouterModule } from '@angular/router';
-import { AuthenticationGuard } from "../modules";
-import {
-    DebatePageComponent,
-    DebatesPageComponent,
-    LoginPageComponent,
-    SchedulePageComponent
-} from "../modules";
+﻿import { Routes, RouterModule } from '@angular/router';
+import { AuthenticationGuard, LoginPageComponent } from "./user";
+import { DebatePageComponent, DebatesPageComponent, SchedulePageComponent } from "./debate";
 
 export const routes: Routes = [
     {
         path: '',
-        loadChildren: '../modules/landing/landing.module#LandingModule'
+        loadChildren: './landing/landing.module#LandingModule'
     },
     {
         path: 'debates',
@@ -37,10 +32,10 @@ export const RoutingModule = RouterModule.forRoot([
     ...routes
 ]);
 
-export const routedComponents = [    
+export const routedComponents = [
     DebatesPageComponent,
     DebatePageComponent,
-    SchedulePageComponent,   
-    LoginPageComponent 
+    SchedulePageComponent,
+    LoginPageComponent
 ];
 

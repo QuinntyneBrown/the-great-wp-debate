@@ -5,8 +5,6 @@ import { Component, Input, OnInit } from "@angular/core";
     styles: [require("./page-header.component.scss")],
     selector: "page-header"
 })
-export class PageHeaderComponent implements OnInit { 
-    ngOnInit() {
+export class PageHeaderComponent { 
 
-    }
 }
