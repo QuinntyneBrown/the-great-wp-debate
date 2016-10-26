@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common";
 
 import { ArticlePageComponent } from './article-page.component';
 import { ArticleService } from "./article.service";
+import { BlogRouterModule } from "./blog.routes";
 
 const declarables = [
     ArticlePageComponent
@@ -13,7 +14,7 @@ const providers = [
 ];
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, BlogRouterModule],
     exports: [declarables],
     declarations: [declarables],
     providers: [providers]

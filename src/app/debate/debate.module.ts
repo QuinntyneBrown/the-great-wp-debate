@@ -5,6 +5,7 @@ import { DebatePageComponent } from './debate-page.component';
 import { DebatesPageComponent } from './debates-page.component';
 import { SchedulePageComponent } from './schedule-page.component';
 import { DebateService } from "./debate.service";
+import { DebateRouterModule } from "./debate.routes";
 
 const declarables = [
     DebatePageComponent,
@@ -18,7 +19,7 @@ const providers = [
 ];
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, DebateRouterModule],
     exports: [declarables],
     declarations: [declarables],
     providers: providers
